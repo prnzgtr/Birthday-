@@ -29,6 +29,7 @@ body {
   overflow: hidden;
   margin: 0 auto;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  aspect-ratio: 3 / 2;
 }
 
 /* 💌 Letter Inside */
@@ -152,11 +153,33 @@ button:hover {
   opacity: 0;
   transform: translateY(-20px);
 }
-@media (max-width: 768px) {
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .envelope {
+    width: 80vw;
+    height: 80vw;
+    aspect-ratio: 3 / 2;
+  }
+
+  .letter h1 {
+    font-size: 22px;
+  }
+
+  .letter p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* Tablet screens (481px–1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
   .envelope {
     width: 80%;
-    height: auto; /* let it scale */
-    aspect-ratio: 3 / 2; /* keeps proportion */
   }
 
   .letter h1 {
@@ -173,24 +196,23 @@ button:hover {
   }
 }
 
-/* Mobile screens (max-width: 480px) */
-@media (max-width: 480px) {
+/* Desktop / Large screens (1024px and above) */
+@media (min-width: 1024px) {
   .envelope {
-    width: 95%;
-    height: auto;
-    aspect-ratio: 3 / 2;
+    width: 700px;   /* bigger on desktop */
+    height: 450px;
   }
 
   .letter h1 {
-    font-size: 22px;
+    font-size: 40px;
   }
 
   .letter p {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   button {
-    font-size: 14px;
-    padding: 6px 12px;
+    font-size: 18px;
+    padding: 12px 24px;
   }
 }
