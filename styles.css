@@ -152,3 +152,45 @@ button:hover {
   opacity: 0;
   transform: translateY(-20px);
 }
+@media (max-width: 768px) {
+  .envelope {
+    width: 80%;
+    height: auto; /* let it scale */
+    aspect-ratio: 3 / 2; /* keeps proportion */
+  }
+
+  .letter h1 {
+    font-size: 28px;
+  }
+
+  .letter p {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .envelope {
+    width: 95%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+
+  .letter h1 {
+    font-size: 22px;
+  }
+
+  .letter p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
